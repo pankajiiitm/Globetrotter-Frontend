@@ -17,7 +17,7 @@ const ChallengeFriend = ({ username, score }) => {
     console.log(data);
 
     if (data.inviteLink) {
-      const message = `Hey ${inviteeName}! 🎮 I scored ${score} in this awesome game! Can you beat my score? Click here to play: http://localhost:3000/challenge?inviter=${username}&invitee=${inviteeName}&score=${score}`;
+      const message = `Hey ${inviteeName}! 🎮 I scored ${score} in this awesome game! Can you beat my score? Click here to play: https://67c6d4db6eba280062313c4f--dazzling-squirrel-e5a380.netlify.app/challenge?inviter=${username}&invitee=${inviteeName}&score=${score}`;
 
       const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
       window.open(whatsappLink, "_blank");
