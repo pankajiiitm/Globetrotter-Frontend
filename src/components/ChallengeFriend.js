@@ -7,7 +7,7 @@ const ChallengeFriend = ({ username, score }) => {
 
   const generateInviteMessage = () => {
     const inviteeName = friendName.trim() === "" ? "Guest" : friendName;
-    return `Hey ${inviteeName}! 🎮 I scored ${score} in this awesome game! Can you beat my score? Click here to play: https://67c6d4db6eba280062313c4f--dazzling-squirrel-e5a380.netlify.app/challenge?inviter=${username}&invitee=${inviteeName}&score=${score}`;
+    return `Hey ${inviteeName}! 🎮 I scored ${score} in this awesome game! Can you beat my score? Click here to play: https://dazzling-squirrel-e5a380.netlify.app/challenge?inviter=${username}&invitee=${inviteeName}&score=${score}`;
   };
 
   const handleShare = async (platform) => {
