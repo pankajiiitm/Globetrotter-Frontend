@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.0.4",
     "framer-motion": "^12.4.9",
     "next": "15.2.0",
     "react": "^19.0.0",
     "react-confetti": "^6.3.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "shadcn-ui": "^0.9.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
