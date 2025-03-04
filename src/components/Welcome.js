@@ -21,11 +21,14 @@ const Welcome = () => {
     setError("");
 
     try {
-      const response = await fetch("https://test-demo-r76u.onrender.com/api/users/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username: name }),
-      });
+      const response = await fetch(
+        "https://test-demo-r76u.onrender.com/api/users/register",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username: name }),
+        }
+      );
 
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Failed to register");
@@ -48,7 +51,7 @@ const Welcome = () => {
         className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{ backgroundImage: "url('/globe-bg.jpg')" }}
       />
-      
+
       {/* Title Animation */}
       <motion.h1
         initial={{ y: -100, opacity: 0 }}
@@ -58,12 +61,12 @@ const Welcome = () => {
       >
         Welcome to <span className="text-blue-400">Globetrotter</span>
       </motion.h1>
-      
+
       {/* Button Animation */}
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="mt-6 px-8 py-3 bg-blue-600 text-lg font-semibold rounded-xl shadow-lg hover:bg-blue-500 transition-all duration-300 z-10"
+        className="mt-12 px-8 py-3 bg-blue-600 text-lg font-semibold rounded-xl shadow-lg hover:bg-blue-500 transition-all duration-300 z-10"
         onClick={() => setIsOpen(true)}
       >
         Get Started
@@ -85,7 +88,9 @@ const Welcome = () => {
               transition={{ duration: 0.3 }}
               className="bg-gray-900 p-8 rounded-xl shadow-2xl text-center w-96 border border-gray-700"
             >
-              <h2 className="text-2xl font-bold text-white mb-4">Enter Your Name</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Enter Your Name
+              </h2>
               <input
                 type="text"
                 className="px-4 py-2 w-full rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
